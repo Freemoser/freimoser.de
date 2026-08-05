@@ -1,11 +1,139 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="Freimoser — AI Engineering & Automation" description="S. Thomas Freimoser. KI-gestützte Automatisierung, intelligente Agenten und Data Engineering. Projekte, die Unternehmen Zeit und Geld sparen.">
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <p class="pretitle">✦ S. Thomas Freimoser</p>
+      <h1>AI Engineering &<br><span class="text-gradient">Automation</span></h1>
+      <p>
+        Ich baue intelligente Systeme, die Unternehmen Zeit und Geld sparen — 
+        von autonomen KI-Agenten bis zu skalierbaren Daten-Pipelines. 
+        VP Data Analytics & Automation · Bootstrapped Entrepreneur.
+      </p>
+      <div class="btn-group">
+        <a href="/projekte/" class="btn btn-primary">Projekte entdecken →</a>
+        <a href="/kontakt/" class="btn btn-secondary">Kontakt</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Projects -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <p class="label">✦ Projekte</p>
+        <h2>Was ich mache</h2>
+        <p>Eine Auswahl meiner AI-Projekte — von autonomen Agenten bis zu Multi-Modell-Plattformen.</p>
+      </div>
+
+      <div class="project-grid">
+        <article class="project-card">
+          <span class="icon">🤖</span>
+          <h3>Hermes Agent</h3>
+          <p>Autonomer KI-Assistent mit Tool-Integration — codiert, recherchiert, administriert Systeme und orchestriert Workflows über 10+ LLM-Provider.</p>
+          <div class="tech-tags">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">LLM Agents</span>
+            <span class="tech-tag">OpenRouter</span>
+            <span class="tech-tag">Multi-Provider</span>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <span class="icon">⚡</span>
+          <h3>OpenCode</h3>
+          <p>Terminal-basierter KI-Coding-Assistent für Prompt-to-Web-App mit Multi-Provider-Support und integrierter Tool-Nutzung.</p>
+          <div class="tech-tags">
+            <span class="tech-tag">TypeScript</span>
+            <span class="tech-tag">CLI</span>
+            <span class="tech-tag">OpenRouter</span>
+            <span class="tech-tag">Code Gen</span>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <span class="icon">🧠</span>
+          <h3>JetGPT</h3>
+          <p>Custom GPT-Workflows und Multi-Modell-Orchestrierung für automatisierte Content-Pipelines und intelligente Datenverarbeitung.</p>
+          <div class="tech-tags">
+            <span class="tech-tag">GPT</span>
+            <span class="tech-tag">Automation</span>
+            <span class="tech-tag">API</span>
+            <span class="tech-tag">Workflows</span>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <span class="icon">🌐</span>
+          <h3>Multi-Model Platform</h3>
+          <p>Integration und Benchmarking von 10+ LLMs — Claude, GPT-5, Grok, Gemini, Kimi & mehr. Einheitliche API-Schicht für flexible Modellwahl.</p>
+          <div class="tech-tags">
+            <span class="tech-tag">OpenAI</span>
+            <span class="tech-tag">Anthropic</span>
+            <span class="tech-tag">xAI</span>
+            <span class="tech-tag">Google</span>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <span class="icon">🔧</span>
+          <h3>Devin</h3>
+          <p>Autonomer KI-Softwareentwickler für eigenständige Code-Generierung, Debugging und Deployment-Prozesse.</p>
+          <div class="tech-tags">
+            <span class="tech-tag">AI Dev</span>
+            <span class="tech-tag">Autonomous</span>
+            <span class="tech-tag">Coding</span>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <span class="icon">📊</span>
+          <h3>Data & Automation</h3>
+          <p>Skalierbare Daten-Pipelines, ETL-Workflows und Automatisierungslösungen für Unternehmen — von der Analyse bis zur Produktion.</p>
+          <div class="tech-tags">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">ETL</span>
+            <span class="tech-tag">SQL</span>
+            <span class="tech-tag">Automation</span>
+          </div>
+        </article>
+      </div>
+
+      <div style="margin-top: var(--space-xl); text-align: center;">
+        <a href="/projekte/" class="btn btn-secondary">Alle Projekte ansehen →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Preview -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <p class="label">✦ Über mich</p>
+        <h2>Wer ich bin</h2>
+      </div>
+
+      <div class="about-card">
+        <div class="avatar">ST</div>
+        <div class="text">
+          <h3>S. Thomas Freimoser</h3>
+          <p class="role">VP Data Analytics & Automation @ Petleo</p>
+          <p>
+            Aus München in Pattaya. Ich verbinde KI mit echter Produktivität — 
+            von autonomen Agenten bis zu skalierbaren Daten-Workflows. 
+            Bootstrapped Entrepreneur mit Fokus auf AI-Lösungen, die im echten Business Mehrwert liefern.
+          </p>
+        </div>
+      </div>
+
+      <div style="margin-top: var(--space-lg);">
+        <a href="/ueber-mich/" class="btn btn-secondary">Mehr über mich →</a>
+      </div>
+    </div>
+  </section>
+
 </Layout>

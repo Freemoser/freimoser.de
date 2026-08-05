@@ -1,0 +1,91 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const projects = [
+  {
+    icon: '🤖',
+    name: 'Hermes Agent',
+    description: 'Autonomer KI-Assistent mit umfassender Tool-Integration. Kann codieren, recherchieren, Dateien verwalten, Systeme administrieren und mehrstufige Workflows orchestrieren. Unterstützt 10+ LLM-Provider über OpenRouter, inklusive Claude, GPT-5, Grok und Gemini.',
+    tags: ['Python', 'LLM Agents', 'OpenRouter', 'Multi-Provider', 'Tool-Use'],
+  },
+  {
+    icon: '⚡',
+    name: 'OpenCode',
+    description: 'Terminal-basierter KI-Coding-Assistent. Prompt-to-Web-App in Sekunden mit Multi-Provider-Support, integrierter Tool-Nutzung und Dateisystem-Zugriff. V1.18 mit OpenRouter/xAI/Grok-Integration.',
+    tags: ['TypeScript', 'CLI', 'OpenRouter', 'Code Generation', 'xAI'],
+  },
+  {
+    icon: '🧠',
+    name: 'JetGPT',
+    description: 'Custom GPT-Workflows und API-gestützte Content-Pipelines. Orchestriert mehrere Modelle für Textgenerierung, Analyse und Transformation. Ermöglicht komplexe Multi-Step-Workflows ohne manuelles Prompt-Engineering.',
+    tags: ['GPT', 'OpenAI', 'Automation', 'API', 'Workflows'],
+  },
+  {
+    icon: '🔬',
+    name: 'Claude / Anthropic',
+    description: 'Integration und Optimierung von Anthropic-Modellen für komplexe Reasoning-Aufgaben, Code-Generierung und sicherheitskritische Anwendungen. Nutzung von Claude Opus, Sonnet und Haiku über API.',
+    tags: ['Anthropic', 'Claude', 'Reasoning', 'Safety'],
+  },
+  {
+    icon: '🌐',
+    name: 'OpenAI GPT-5',
+    description: 'Arbeit mit OpenAI-Modellen inkl. GPT-5 und o-Serie für anspruchsvolle NLP-, Analyse- und Code-Aufgaben. Integration über API mit optimierten Prompts und System-Instructions.',
+    tags: ['OpenAI', 'GPT-5', 'NLP', 'API'],
+  },
+  {
+    icon: '🔧',
+    name: 'Devin',
+    description: 'Autonomer KI-Softwareentwickler für eigenständige Code-Generierung, Debugging, Testing und Deployment. Nutzung für prototypische Entwicklungen und Refactoring-Aufgaben.',
+    tags: ['AI Dev', 'Autonomous', 'Coding', 'Deployment'],
+  },
+  {
+    icon: '🚀',
+    name: 'Grok / xAI',
+    description: 'Integration von Gork-Modellen über OpenRouter für Echtzeit-Chat und Coding. Nutzung des SuperGrok-Accounts für vollständigen API-Zugriff auf xAI-Modelle.',
+    tags: ['xAI', 'Grok', 'OpenRouter', 'Real-time'],
+  },
+  {
+    icon: '🇨🇳',
+    name: 'Kimi / Moonshot AI',
+    description: 'Evaluation und Integration von Kimi — dem chinesischen LLM mit extrem langem Context Window (200K+ Tokens) für umfangreiche Dokumentenanalyse und Recherche.',
+    tags: ['Kimi', 'Moonshot', 'Long Context', 'Research'],
+  },
+  {
+    icon: '📊',
+    name: 'Data & Automation',
+    description: 'Skalierbare Daten-Pipelines, ETL-Workflows und Automatisierungslösungen für Unternehmen. Von der Datenerfassung über die Analyse bis zur automatisierten Entscheidungsfindung.',
+    tags: ['Python', 'ETL', 'SQL', 'Automation', 'Data Engineering'],
+  },
+];
+---
+
+<Layout title="Projekte — Freimoser" description="Meine AI-Projekte im Überblick: Hermes Agent, OpenCode, JetGPT, Claude, GPT-5, Devin, Grok, Kimi und mehr.">
+
+  <section class="page-header">
+    <div class="container">
+      <p class="pretitle" style="font-size:0.8rem;text-transform:uppercase;letter-spacing:3px;color:var(--amber-400);font-weight:500;margin-bottom:var(--space-md);">✦ Projekte</p>
+      <h1>AI Engineering &<br><span class="text-gradient">Automation</span></h1>
+      <p>Meine Arbeit mit modernsten KI-Modellen und Tools — von autonomen Agenten bis zu skalierbaren Plattformen.</p>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0;">
+    <div class="container">
+      <div class="project-grid">
+        {projects.map((p) => (
+          <article class="project-card">
+            <span class="icon">{p.icon}</span>
+            <h3>{p.name}</h3>
+            <p>{p.description}</p>
+            <div class="tech-tags">
+              {p.tags.map((tag) => (
+                <span class="tech-tag">{tag}</span>
+              ))}
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+</Layout>
