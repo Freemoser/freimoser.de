@@ -63,25 +63,28 @@ const projects = [
 
   <section class="page-header">
     <div class="container">
-      <p class="pretitle" style="font-size:0.8rem;text-transform:uppercase;letter-spacing:3px;color:var(--amber-400);font-weight:500;margin-bottom:var(--space-md);">✦ Projekte</p>
-      <h1>AI Engineering &<br><span class="text-gradient">Automation</span></h1>
+      <p class="pretitle">Projekte</p>
+      <h1>AI Engineering &<br /><span class="text-gradient">Automation</span></h1>
       <p>Meine Arbeit mit modernsten KI-Modellen und Tools — von autonomen Agenten bis zu skalierbaren Plattformen.</p>
     </div>
   </section>
 
-  <section class="section" style="padding-top:0;">
+  <section class="section" style="padding-top: 0;">
     <div class="container">
-      <div class="project-grid">
-        {projects.map((p) => (
-          <article class="project-card">
+      <div class="project-list">
+        {projects.map((p, i) => (
+          <article class="project-row">
             <span class="icon">{p.icon}</span>
-            <h3>{p.name}</h3>
-            <p>{p.description}</p>
-            <div class="tech-tags">
-              {p.tags.map((tag) => (
-                <span class="tech-tag">{tag}</span>
-              ))}
+            <div>
+              <h3>{p.name}</h3>
+              <p>{p.description}</p>
+              <div class="tech-tags">
+                {p.tags.map((tag) => (
+                  <span class="tech-tag">{tag}</span>
+                ))}
+              </div>
             </div>
+            <span class="row-index">{String(i + 1).padStart(2, '0')}</span>
           </article>
         ))}
       </div>
