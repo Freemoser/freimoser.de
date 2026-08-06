@@ -56,6 +56,20 @@ const projects = [
     description: 'Skalierbare Daten-Pipelines, ETL-Workflows und Automatisierungslösungen für Unternehmen. Von der Datenerfassung über die Analyse bis zur automatisierten Entscheidungsfindung.',
     tags: ['Python', 'ETL', 'SQL', 'Automation', 'Data Engineering'],
   },
+  {
+    icon: '🦟',
+    name: 'Zecken finden',
+    description: 'zecken-finden.org — Informationsportal rund um Zecken, Zeckenschutz und richtiges Entfernen. Hilft dabei, Zecken zu identifizieren und fundierte Entscheidungen zum Schutz zu treffen.',
+    tags: ['Website', 'Health', 'Info Portal', 'German'],
+    url: 'https://zecken-finden.org/',
+  },
+  {
+    icon: '🌳',
+    name: 'FamilyTree Free',
+    description: 'familytree-free.com/de — Kostenloser Stammbaum-Ersteller. Erstelle und verwalte deinen Familienstammbaum online — einfach, kostenlos und ohne Registrierung.',
+    tags: ['Website', 'Genealogy', 'Family Tree', 'German'],
+    url: 'https://familytree-free.com/de/',
+  },
 ];
 ---
 
@@ -76,7 +90,11 @@ const projects = [
           <article class="project-row">
             <span class="icon">{p.icon}</span>
             <div>
-              <h3>{p.name}</h3>
+              {p.url ? (
+                <h3><a href={p.url} target="_blank" rel="noopener noreferrer">{p.name} ↗</a></h3>
+              ) : (
+                <h3>{p.name}</h3>
+              )}
               <p>{p.description}</p>
               <div class="tech-tags">
                 {p.tags.map((tag) => (

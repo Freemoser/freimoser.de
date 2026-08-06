@@ -492,6 +492,17 @@ h3 {
 
 .project-card:hover::before { opacity: 1; }
 
+.project-card .card-link {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.project-card .card-link:hover {
+  color: inherit;
+}
+
 .project-card .icon {
   width: 48px;
   height: 48px;
